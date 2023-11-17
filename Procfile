@@ -1,1 +1,1 @@
-web: gunicorn taller.wsgi:application
+web: gunicorn taller.wsgi --log-file -
