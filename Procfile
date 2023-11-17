@@ -1,1 +1,1 @@
-web: gunicorn taller.wsgi
+web: gunicorn taller.taller.wsgi
