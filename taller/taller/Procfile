@@ -1,1 +1,2 @@
 web: gunicorn --chdir  taller taller.wsgi
+heroku ps:scale web=1
