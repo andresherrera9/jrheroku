@@ -1,0 +1,1 @@
+web: gunicorn jrheroku.taller.wsgi
