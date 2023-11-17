@@ -12,8 +12,8 @@ def index_ros(request, page_id,ros_id):
     idpage = page_id
     url = '/ROS'+ide +'.pdf'
     url_anexo = '/ANEXOROS'+ide +'.pdf'
-    url_exists = exists('ros/static/ROS'+ide +'.pdf') # al pasar al despliegue puede que esto falle, cambiar ruta al estatico general
-    anexo_exists = exists('ros/static/ANEXOROS'+ide +'.pdf') # al pasar al despliegue puede que esto falle, cambiar ruta al estatico general
+    url_exists = exists('ros/static/ROS'+ide +'.pdf') 
+    anexo_exists = exists('ros/static/ANEXOROS'+ide +'.pdf') 
     print(url_exists)
     print(anexo_exists)
 
