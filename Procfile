@@ -1,2 +1,1 @@
-release: python taller/manage.py migrate
-web: gunicorn taller.taller.wsgi --log-file -
+web: gunicorn taller.wsgi --log-file -
