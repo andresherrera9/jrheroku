@@ -1,2 +1,2 @@
-release: python manage.py migrate
-web: python manage.py runserver
+release: python taller/manage.py migrate
+web: python taller/manage.py runserver
