@@ -15,5 +15,4 @@ urlpatterns = [
     path('juegoderoles/solicitud/',include('solicitud.urls')),
     path('juegoderoles/',include('homepage.urls')),    
    
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
+] 
