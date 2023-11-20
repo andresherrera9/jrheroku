@@ -44,7 +44,7 @@ def index(request,polls_id,page_id):
             for k,v in data_.items():
                 df2[str(k)] = v         
                 df2[str(k)] = df2[str(k)].replace({'True':1,'False':0})
-                df_f = df.append(df2)
+                df_f = pd.concat([df,df2],ignore_index=True)
                 df_f.to_csv('static/media/ROS_'+polls_id+'.csv', index=False)
         else:
             
