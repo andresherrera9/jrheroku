@@ -203,7 +203,7 @@ def vistas(request):
        pd.DataFrame(RegistroROS.objects.filter(Q(ros=1) | Q(ros=2) | Q(ros=3),Q(personaPrincipal = p)).values('codigoROS','fechaReporte','bancoReportante','personaPrincipal__nombrePersona','valorOperacion',
                                                                         'descripcionOperacion')).to_excel(writer, sheet_name='ROS',index=False)   
 
-    writer.save()
+    writer.close()
     output_name='SICON'
     output.seek(0)
     
