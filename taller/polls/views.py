@@ -35,17 +35,17 @@ def index(request,polls_id,page_id):
                 if data_[x] < 0:
                     data_[x] = 0
            
-        path = Path('static/media/ROS_'+polls_id+'.csv')
+        path = Path('staticfiles/media/ROS_'+polls_id+'.csv')
         
         if path.is_file():
-            df = pd.read_csv('static/media/ROS_'+polls_id+'.csv')
+            df = pd.read_csv('staticfiles/media/ROS_'+polls_id+'.csv')
             df2 = pd.DataFrame(data_)
             df2["fecha"] = current_time
             for k,v in data_.items():
                 df2[str(k)] = v         
                 df2[str(k)] = df2[str(k)].replace({'True':1,'False':0})
                 df_f = pd.concat([df,df2],ignore_index=True)
-                df_f.to_csv('static/media/ROS_'+polls_id+'.csv', index=False)
+                df_f.to_csv('staticfiles/media/ROS_'+polls_id+'.csv', index=False)
         else:
             
             df = pd.DataFrame.from_dict(data_)
