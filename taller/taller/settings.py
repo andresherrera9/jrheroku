@@ -1,5 +1,5 @@
 import os
-#import django_heroku
+import django_heroku
 
 
 
@@ -139,7 +139,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 
 
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
 
 
 
