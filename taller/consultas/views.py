@@ -123,8 +123,6 @@ def resultado_persona(request,idpage):
 def vistas(request):
     idPersona= request.GET["idPersona"]
     idpage= request.GET["idpage"]
-    #print(idpage)
-    #print(idPersona)
     output = BytesIO()
     p = Personas.objects.get(idPersona = idPersona)
 
