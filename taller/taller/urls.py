@@ -15,8 +15,8 @@ urlpatterns = [
     path('juegoderoles/solicitud/',include('solicitud.urls')),
     path('juegoderoles/',include('homepage.urls')),    
    
-] #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 #urlpatterns += staticfiles_urlpatterns()
 #if settings.DEBUG:
-#urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ #   urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
