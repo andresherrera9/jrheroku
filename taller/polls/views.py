@@ -50,7 +50,7 @@ def index(request,polls_id,page_id):
             
             df = pd.DataFrame.from_dict(data_)
             df["fecha"] = current_time
-            df.to_csv('static/media/ROS_'+polls_id+'.csv',index=False)
+            df.to_csv('staticfiles/media/ROS_'+polls_id+'.csv',index=False)
 
         messages.success(request,messages.INFO, 'Hola mundo')
         return redirect(request.path)
