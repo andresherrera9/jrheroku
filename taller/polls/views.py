@@ -9,6 +9,7 @@ from django.utils import timezone
 import pytz
 from datetime import datetime
 import sys
+from django.conf import settings
 
 #¿Cambiar de staticfiles a static?
 
