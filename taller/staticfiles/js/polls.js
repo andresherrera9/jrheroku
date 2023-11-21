@@ -32,4 +32,6 @@
 
 if (document.contains(document.getElementById("django-message"))) {
             document.getElementById("submit").remove();
-} 
+            window.scrollTo(0,document.body.scrollHeight);
+    } ;
+
