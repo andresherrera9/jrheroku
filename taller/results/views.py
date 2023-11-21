@@ -14,7 +14,7 @@ def getresults(request,results_id,start_date,end_date):
     start_date = datetime.strptime(start_date,'%Y-%m-%d-%H:%M')
     end_date = datetime.strptime(end_date,'%Y-%m-%d-%H:%M')
     results_id = str(results_id)
-    df = pd.read_csv('staticfiles/media/ROS_'+results_id+'.csv')
+    df = pd.read_csv('taller/static/media/ROS_'+results_id+'.csv')
     #df = df.fillna(0)
     df['fecha'] = pd.to_datetime(df['fecha'], format='%Y-%m-%d-%H:%M')
     df = df[(df['fecha'] >= start_date) & (df['fecha'] <= end_date)]
@@ -37,7 +37,7 @@ def getresults(request,results_id,start_date,end_date):
 
 def uniqueres(request,results_id):
     results_id = str(results_id)
-    df = pd.read_csv('staticfiles/media/ROS_'+results_id+'.csv')
+    df = pd.read_csv('taller/static/media/ROS_'+results_id+'.csv')
     df = df.fillna(0)
     geeks_object = df.to_html()
   
