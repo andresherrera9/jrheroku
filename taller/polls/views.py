@@ -40,7 +40,7 @@ def index(request,polls_id,page_id):
         path = Path('static/media/ROS_'+polls_id+'.csv')
         
         if path.is_file():
-            df = pd.read_csv('static/media/ROS_'+polls_id+'.csv')
+            df = pd.read_csv('taller/static/media/ROS_'+polls_id+'.csv')
             df2 = pd.DataFrame(data_)
             df2["fecha"] = current_time
             for k,v in data_.items():
@@ -52,7 +52,7 @@ def index(request,polls_id,page_id):
             
             df = pd.DataFrame.from_dict(data_)
             df["fecha"] = current_time
-            df.to_csv('static/media/ROS_'+polls_id+'.csv',index=False)
+            df.to_csv('taller/static/media/ROS_'+polls_id+'.csv',index=False)
 
         messages.success(request,messages.INFO, 'Hola mundo')
         return redirect(request.path)
