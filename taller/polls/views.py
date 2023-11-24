@@ -37,7 +37,7 @@ def index(request,polls_id,page_id):
                 if data_[x] < 0:
                     data_[x] = 0
            
-        path = Path('static/media/ROS_'+polls_id+'.csv')
+        path = Path('taller/static/media/ROS_'+polls_id+'.csv')
         
         if path.is_file():
             df = pd.read_csv('taller/static/media/ROS_'+polls_id+'.csv')
