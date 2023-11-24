@@ -48,11 +48,19 @@
     {% if 'success' in message.tags %}
     <div id = "django-message" class="success-message" style="font-size: 15px;">¡Gracias por tu respuesta! 
     <br><br>
-    
-    <!--Link de descarga para red de vinculos
-    <a href="{% static pdf_vinculos %}" download><i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i></a>
-    </div>-->
-    <br><br>
+        {% if idpage == 1 or idpage == 2 %}
+        <!--Link de descarga para red de vinculos -->
+        <a href="{% static grafo %}" download>Red de vinculos {{idpage}} <i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i></a>
+        {% endif %}
+        {% if idpage == 3 %}
+        <!--Link de descarga para red de vinculos -->
+        <a href="{% static grafo %}" download>Red de vinculos 3 <i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i></a><br><br>
+        <a href="{% static consolidada %}" download>Red de vinculos consolidada  <i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i></a>
+        {% endif %}
+
+
+    </div>
+        <br><br>
     {% endif %}
 {% endfor %}
 <div id="scroll"></div>
